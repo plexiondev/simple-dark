@@ -48,6 +48,7 @@ body{
     --interactive-text-white: #0b0b0f;
     --interactive: #cccde2;
     --interactive-hov: #ffffff;
+    --control: var(--accent);
 
     /* Accent */
     --accent: #3D5FF1;
@@ -114,6 +115,7 @@ body{
     --brand-experiment: var(--accent);
     --brand-experiment-560: var(--accent);
     --brand-experiment-600: var(--accent-raise);
+    --control-brand-foreground: var(--control);
 }
 
 /* Apply indent and transition upon click */
@@ -251,7 +253,7 @@ img[src="/assets/1f0bfc0865d324c2587920a7d80c609b.png"] /* Selects the img with 
 }
 /* Apply transition and indent on click */
 .content-1x5b-n, .layout-2DM8Md {
-    border-radius: 10px;
+    border-radius: 5px;
     transition: 0.2s;
     --t: 0.98;
 }
@@ -726,6 +728,14 @@ img[src="/assets/1f0bfc0865d324c2587920a7d80c609b.png"] /* Selects the img with 
     box-shadow: var(--raise-from-screen);
 }
 
+/* Video screens */
+.flexCenter-2Y_vCg {
+    padding-left: 10px !important;
+}
+.tile-2naSqK {
+    border-radius: 10px;
+}
+
 /*
     Buttons
 */
@@ -735,8 +745,15 @@ button {
     border-radius: 10px;
     --t: 0.96;
 }
-.button-38aScr {
+.button-38aScr:not(.centerButton-3CaNcJ, .participantsButton-KYW-IW) {
     border-radius: 5px;
+}
+/* Centered buttons for calls */
+.colorable-1bkp8v.primaryDark-3mSFDl, .participantsButton-KYW-IW {
+    background: var(--float);
+}
+.colorable-1bkp8v.primaryDark-3mSFDl:hover, .participantsButton-KYW-IW:hover {
+    background: var(--float-raise);
 }
 /* Coloured buttons */
 .lookFilled-1Gx00P {
@@ -757,11 +774,11 @@ button {
     color: var(--interactive-text);
 }
 /* Green buttons */
-.lookFilled-1Gx00P.colorGreen-29iAKY {
+.lookFilled-1Gx00P.colorGreen-29iAKY, .button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp, .button-1YfofB .buttonColor-7qQbGO.buttonActive-3FrkXp {
     background-color: var(--button-green);
     color: var(--interactive-text-white);
 }
-.lookFilled-1Gx00P.colorGreen-29iAKY:hover {
+.lookFilled-1Gx00P.colorGreen-29iAKY:hover, .button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp:hover, .button-1YfofB .buttonColor-7qQbGO.buttonActive-3FrkXp:hover {
     opacity: 0.7;
     background-color: var(--button-green);
     color: var(--interactive-text-white);
@@ -820,6 +837,16 @@ button {
     border-radius: 10px;
     transition: 0.2s;
     --t: 1.1;
+}
+
+/* Video preview */
+.theme-dark .userSettingsVoice-iwdUCU .previewOverlay-2O7_KC {
+    background-color: var(--raise-float);
+    border: none;
+    border-radius: 10px;
+}
+.userSettingsVoice-iwdUCU .media-engine-video {
+    background: none;
 }
 
 /* Profile statuses */
@@ -994,6 +1021,12 @@ button {
     background-color: var(--float);
     border-radius: 10px;
     box-shadow: var(--raise-from-screen);
+}
+/* Pin a message */
+.theme-dark .message-2qRu38, .message-2qRu38 {
+    background-color: var(--main);
+    border-radius: 10px;
+    box-shadow: none;
 }
 /* Pinned messages */
 .container-7uh5fX, .messagesPopoutWrap-1MQ1bW, .container-enaOkj, .root-1gCeng, .theme-dark .root-1gCeng {
@@ -1358,4 +1391,15 @@ button {
     background: var(--float) !important;
     box-shadow: var(--raise-from-chat);
     border-radius: 10px;
+}
+
+/*
+    Discord really adding the features nobody wants les go
+*/
+/* Fix capitalisation for many random places in English, UK */
+.descriptionStandalone-3aMqwN:first-letter {
+    text-transform: uppercase;
+}
+.item-PXvHYJ, .h1-1qdNzo, .label-22pbtT {
+    text-transform: capitalize;
 }
