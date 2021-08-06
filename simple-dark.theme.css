@@ -27,7 +27,7 @@ body{
     --back: #0E0E14;
     --main: #11111a;
     --raise: #121224;
-    --raise2: #13132e;
+    --raise2: #19193b;
     /* Messages */
     --msg: #09090c;
     --mention: #8393f118;
@@ -45,8 +45,9 @@ body{
     --float-raise: #0d0d14;
 
     /* Grey, bland buttons */
-    --button-grey: #202027;
-    --button-grey-hover: #2a2a36;
+    --button-grey: #17172e;
+    --button-grey-hover: #272758;
+    --button-disabled: #0f0f1b;
     /* Green buttons */
     --button-green: var(--green);
 
@@ -77,10 +78,10 @@ body{
 
     /* Head */
     --head: rgb(236, 236, 236);
-    --head-sec: rgba(213, 219, 243, 0.8);
-    --general: rgba(200, 197, 224, 0.8);
-    --desc: rgba(204, 201, 231, 0.6);
-    --overline: rgba(208, 205, 241, 0.4);
+    --head-sec: rgba(213, 219, 243, 0.9);
+    --general: rgba(200, 197, 224, 0.87);
+    --desc: rgba(204, 201, 231, 0.8);
+    --overline: rgba(208, 205, 241, 0.45);
     --muted: rgba(180, 174, 243, 0.3);
     --link: #8ea4fa;
 
@@ -129,6 +130,7 @@ body{
     --text-warning: var(--amber);
     --text-normal: var(--desc);
     --text-link: var(--link);
+    --text-muted: var(--muted);
     --info-positive-foreground: var(--green);
     --status-positive-background-color: var(--green);
     --header-primary: var(--head);
@@ -342,7 +344,6 @@ img[src="/assets/1f0bfc0865d324c2587920a7d80c609b.png"] /* Selects the img with 
 .role-2irmRk {
     border: none;
     background: var(--raise);
-    padding: 5px 5px 5px 10px;
 }
 .roleCircle-3xAZ1j {
     width: 8px;
@@ -884,6 +885,10 @@ button {
 .button-38aScr:not(.centerButton-3CaNcJ):not(.participantsButton-KYW-IW) {
     border-radius: 5px;
 }
+/* Disabled buttons */
+.theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6:disabled {
+    background: var(--button-disabled);
+}
 /* Centered buttons for calls */
 .colorable-1bkp8v.primaryDark-3mSFDl, .participantsButton-KYW-IW {
     background: var(--float);
@@ -943,18 +948,27 @@ button {
 }
 
 /* Radio boxes */
-.item-26Dhrx {
+/* Remove background from item parent */
+.item-26Dhrx, .item-26Dhrx:hover {
+    background: none !important;
+}
+/* Modify radio bar */
+.item-26Dhrx .radioBar-bMNUI- {
     border-radius: 10px;
     background: var(--raise-float);
     transition: 0.2s;
 }
-div[role="radiogroup"]:not([aria-labelledby="9f72cb58-7495-4052-9220-8725280c0954"]) .item-26Dhrx[aria-checked=true] {
+.item-26Dhrx:hover .radioBar-bMNUI- {
+    background: var(--raise2);
+}
+/* When selected */
+.item-26Dhrx[aria-checked=true] .radioBar-bMNUI- {
     background: var(--raise-active);
     border-left: 3px solid var(--accent);
     border-radius: 3px 10px 10px 3px;
     box-shadow: var(--raise-slightly);
 }
-.item-26Dhrx[aria-checked=true] {
+.item-26Dhrx[aria-checked=true] .radioBar-bMNUI- {
     background: var(--raise-active);
     border-radius: 3px 10px 10px 3px;
     box-shadow: var(--raise-slightly);
@@ -1664,6 +1678,10 @@ div[role="radiogroup"]:not([aria-labelledby="9f72cb58-7495-4052-9220-8725280c095
     width: 34px;
     height: 24px;
     transition: 0.05s;
+}
+/* Remove wordmark */
+.wordmark-2iDDfm {
+    display: none;
 }
 
 /* Slash Commands */
