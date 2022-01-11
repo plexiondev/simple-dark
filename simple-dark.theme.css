@@ -147,6 +147,31 @@ body{
     --control-brand-foreground: var(--control);
 }
 
+
+
+/* emergency warning 11/01/2022 */
+.withFrame-2dL45i {
+    height: 48px;
+}
+.wordmark-2u86JB::after {
+    margin-left: 20px;
+    content: 'Discord has pushed an update that has broken pretty much every theme until it is updated. Check github.com/plexiondev/simple-dark for more details.';
+    font-family: var(--font-primary);
+    background-color: rgb(255, 68, 68);
+    padding: 0 10px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    color: rgb(10, 2, 2);
+    font-size: 18px;
+    position: fixed;
+    top: 0;
+    left: -20px;
+    font-weight: 600;
+}
+
+
+
 /* Apply indent and transition upon click */
 .button-1ZiXG9:active .icon-3Gkjwa, .tabBar-31Wimb .tab-PQvTH4:active, .tabBar-wS4pjJ .tab-17bjMB:active, .tab-2j5AEF:active, .item-PXvHYJ:active, .grabber-3mFHz2:active, button:active, .unicodeShortcut-15J8Ck:active svg, .emojiItem-14v6tW.emojiItemSelected-1aLkfV, .emojiItem-14v6tW:hover, .attachButton-2WznTc:hover .attachButtonPlus-jWVFah, .listItem-GuPuDH:active, .content-1x5b-n:active, .layout-2DM8Md:active, .actionButton-uPB8Fs:hover, .container-_phMUq:active, .button-38aScr:hover .button-3AYNKb, .buttonWrapper-1ZmCpA:hover, .clickable-3rdHwn:hover .icon-22AiRD {
     transform: scale(var(--t)) /* Uses a custom variable (t) defined by each class listed ^ to transform the scale */;
