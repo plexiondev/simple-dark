@@ -4,11 +4,7 @@ A simple, dark and minimal theme for Discord. Featuring a nice blue-black colour
 
 ## Gallery
 
-### before
 ![Preview](https://i.imgur.com/Wm01n0r.png)
-
-### after
-![why discord](https://plexion.s-ul.eu/Gc31zEiz)
 
 ## Installing
 
